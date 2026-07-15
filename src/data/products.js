@@ -41,7 +41,7 @@ const u = (id) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&
 
 
 /* ===========================================================================
-   SECTION 1 — SOFAS & SEATING
+   SECTION 1 — SOFAS
    =========================================================================== */
 export const sofas = [
 
@@ -51,7 +51,6 @@ export const sofas = [
     price: 24999,
     description:
       "Hand-tufted leather chesterfield with solid mahogany legs. A statement piece for grand living rooms.",
-    // Add more angle shots of THIS sofa below.
     images: [
       u("1555041469-a586c61ea9bc"),
     ],
@@ -85,59 +84,16 @@ export const sofas = [
 
 
 /* ===========================================================================
-   SECTION 2 — BEDS & BEDROOM
+   SECTION 2 — TABLES
    =========================================================================== */
-export const beds = [
-
-  {
-    id: 2,
-    title: "Prestige King Bed",
-    price: 39999,
-    description:
-      "Velvet-upholstered king bed with hand-stitched headboard and brushed brass detailing.",
-    images: [
-      u("1505693416388-ac5ce068fe85"),
-    ],
-  },
-
-  {
-    id: 9,
-    title: "Astoria Canopy Bed",
-    price: 44999,
-    description:
-      "Four-poster canopy bed in solid oak, finished in espresso with hand-carved detailing.",
-    images: [
-      u("1522771739844-6a9f6d5f14af"),
-    ],
-  },
-
-  {
-    id: 15,
-    title: "Duchess Vanity Set",
-    price: 13999,
-    description:
-      "Three-fold mirrored vanity in cream lacquer with matching upholstered stool.",
-    images: [
-      u("1551298370-9d3d53740c72"),
-    ],
-  },
-
-];
-
-
-
-
-/* ===========================================================================
-   SECTION 3 — DINING
-   =========================================================================== */
-export const dining = [
+export const tables = [
 
   {
     id: 3,
-    title: "Monarch Dining Set",
+    title: "Monarch Dining Table",
     price: 29999,
     description:
-      "Eight-seater walnut dining ensemble with marble inlay and signature gilded edges.",
+      "Eight-seater walnut dining table with marble inlay and signature gilded edges.",
     images: [
       u("1617806118233-18e1de247200"),
     ],
@@ -153,92 +109,6 @@ export const dining = [
       u("1617104678098-de229db51175"),
     ],
   },
-
-  {
-    id: 19,
-    title: "Florence Dining Chairs (Set of 4)",
-    price: 11999,
-    description:
-      "Set of four upholstered dining chairs in saddle leather with tapered ash legs.",
-    images: [
-      u("1554995207-c18c203602cb"),
-    ],
-  },
-
-];
-
-
-
-
-/* ===========================================================================
-   SECTION 4 — CHAIRS & ACCENT SEATING
-   =========================================================================== */
-export const chairs = [
-
-  {
-    id: 4,
-    title: "Executive Lounge Chair",
-    price: 12999,
-    description:
-      "Italian leather lounge chair with sculpted oak frame and ergonomic curvature.",
-    images: [
-      u("1567538096630-e0c55bd6374c"),
-    ],
-  },
-
-  {
-    id: 7,
-    title: "Bordeaux Wingback Chair",
-    price: 9999,
-    description:
-      "Deep-buttoned wingback in handwoven jacquard with stained beechwood legs.",
-    images: [
-      u("1561701984-26ace0ec5e94"),
-    ],
-  },
-
-  {
-    id: 11,
-    title: "Belmont Accent Chair",
-    price: 7499,
-    description:
-      "Sculptural accent chair upholstered in mohair velvet with brass-tipped legs.",
-    images: [
-      u("1519947486511-46149fa0a254"),
-    ],
-  },
-
-  {
-    id: 17,
-    title: "Côte d'Azur Ottoman",
-    price: 5499,
-    description:
-      "Round tufted ottoman in ivory boucle with hand-finished walnut base.",
-    images: [
-      u("1580229080435-1c7e2c5be0e3"),
-    ],
-  },
-
-  {
-    id: 21,
-    title: "Windsor Reading Nook",
-    price: 10999,
-    description:
-      "Curved reading chair with integrated side shelf in cognac leather.",
-    images: [
-      u("1506439773649-6e0eb8cfb237"),
-    ],
-  },
-
-];
-
-
-
-
-/* ===========================================================================
-   SECTION 5 — TABLES & SURFACES
-   =========================================================================== */
-export const tables = [
 
   {
     id: 5,
@@ -279,62 +149,224 @@ export const tables = [
 
 
 /* ===========================================================================
-   SECTION 6 — CABINETS & STORAGE
+   SECTION 3 — CHAIRS
    =========================================================================== */
-export const cabinets = [
+export const chairs = [
 
   {
-    id: 6,
-    title: "Heritage Display Cabinet",
+    id: 4,
+    title: "Executive Lounge Chair",
+    price: 12999,
+    description:
+      "Italian leather lounge chair with sculpted oak frame and ergonomic curvature.",
+    images: [
+      u("1567538096630-e0c55bd6374c"),
+    ],
+  },
+
+  {
+    id: 7,
+    title: "Bordeaux Wingback Chair",
+    price: 9999,
+    description:
+      "Deep-buttoned wingback in handwoven jacquard with stained beechwood legs.",
+    images: [
+      u("1561701984-26ace0ec5e94"),
+    ],
+  },
+
+  {
+    id: 11,
+    title: "Belmont Accent Chair",
+    price: 7499,
+    description:
+      "Sculptural accent chair upholstered in mohair velvet with brass-tipped legs.",
+    images: [
+      u("1519947486511-46149fa0a254"),
+    ],
+  },
+
+  {
+    id: 19,
+    title: "Florence Dining Chairs (Set of 4)",
+    price: 11999,
+    description:
+      "Set of four upholstered dining chairs in saddle leather with tapered ash legs.",
+    images: [
+      u("1554995207-c18c203602cb"),
+    ],
+  },
+
+  {
+    id: 21,
+    title: "Windsor Reading Nook",
+    price: 10999,
+    description:
+      "Curved reading chair with integrated side shelf in cognac leather.",
+    images: [
+      u("1506439773649-6e0eb8cfb237"),
+    ],
+  },
+
+  {
+    id: 17,
+    title: "Côte d'Azur Ottoman",
+    price: 5499,
+    description:
+      "Round tufted ottoman in ivory boucle with hand-finished walnut base.",
+    images: [
+      u("1580229080435-1c7e2c5be0e3"),
+    ],
+  },
+
+];
+
+
+
+
+/* ===========================================================================
+   SECTION 4 — MATS
+   =========================================================================== */
+export const mats = [
+
+  {
+    id: 23,
+    title: "Royal Persian Area Rug",
     price: 18999,
     description:
-      "Glass-fronted display cabinet in burled walnut with internal soft-glow lighting.",
+      "Hand-knotted wool Persian rug with intricate medallion pattern in burgundy and gold.",
     images: [
-      u("1551298370-9d3d53740c72"),
+      u("1567226123374-5f2b8a70d5a2"),
     ],
   },
 
   {
-    id: 13,
-    title: "Ravello Wardrobe",
-    price: 21999,
+    id: 24,
+    title: "Silk Kashan Runner",
+    price: 12499,
     description:
-      "Eight-door wardrobe in matte ebony with smoked glass inserts and integrated lighting.",
+      "Luxurious silk hallway runner with detailed floral motifs and a soft sheen finish.",
     images: [
-      u("1581539250439-c96689b516dd"),
+      u("1589820296156-2454b8a1a6e1"),
     ],
   },
 
   {
-    id: 16,
-    title: "Atelier Bookcase",
-    price: 14999,
+    id: 25,
+    title: "Modern Geometric Mat",
+    price: 3999,
     description:
-      "Floor-to-ceiling open bookcase in blackened steel and smoked walnut shelves.",
+      "Low-pile contemporary mat in charcoal and cream, perfect for high-traffic living spaces.",
     images: [
-      u("1595428774223-ef52624120d2"),
+      u("1600607686527-6b3b8b1b4c9e"),
+    ],
+  },
+
+];
+
+
+
+
+/* ===========================================================================
+   SECTION 5 — KITCHEN ACCESSORIES
+   =========================================================================== */
+export const kitchenAccessories = [
+
+  {
+    id: 26,
+    title: "Crystal Decanter Set",
+    price: 4999,
+    description:
+      "Lead-free crystal decanter with four matching tumblers, finished with a hand-cut diamond pattern.",
+    images: [
+      u("1565538810643-5b4d4d7e9c0f"),
     ],
   },
 
   {
-    id: 18,
-    title: "Regent Sideboard",
-    price: 19999,
+    id: 27,
+    title: "Marble Serving Board",
+    price: 2499,
     description:
-      "Mid-century inspired sideboard in rosewood with brushed brass hardware.",
+      "White Carrara marble board with brass handles, ideal for cheese and charcuterie presentations.",
     images: [
-      u("1531973486364-5fa64260d75b"),
+      u("1603193906672-4f0b3c6b1e5a"),
     ],
   },
 
   {
-    id: 22,
-    title: "Olympia Bar Cabinet",
-    price: 22999,
+    id: 28,
+    title: "Brass Cutlery Set",
+    price: 3499,
     description:
-      "Lacquered bar cabinet with mirrored interior, glass shelves, and brass fittings.",
+      "24-piece brushed brass cutlery set with weighted handles and a polished gold finish.",
     images: [
-      u("1533090481720-856c6e3c1fdc"),
+      u("1590796146923-2807df65d29e"),
+    ],
+  },
+
+  {
+    id: 29,
+    title: "Gold-Rimmed Dinner Set",
+    price: 5999,
+    description:
+      "Fine porcelain 12-piece dinner set with hand-painted gold rims and a glossy glaze.",
+    images: [
+      u("1556910103-1c02745a30bf"),
+    ],
+  },
+
+];
+
+
+
+
+/* ===========================================================================
+   SECTION 6 — LAMPS & LIGHT FIXTURES
+   =========================================================================== */
+export const lamps = [
+
+  {
+    id: 30,
+    title: "Crystal Chandelier",
+    price: 45999,
+    description:
+      "Tiered crystal chandelier with brushed brass arms and warm LED candle bulbs.",
+    images: [
+      u("1513506003013-110a0046f7e2"),
+    ],
+  },
+
+  {
+    id: 31,
+    title: "Brass Arc Floor Lamp",
+    price: 8999,
+    description:
+      "Sculptural arc floor lamp in antique brass with a cream linen drum shade.",
+    images: [
+      u("1507473885765-e6ed057f782c"),
+    ],
+  },
+
+  {
+    id: 32,
+    title: "Marble Table Lamp",
+    price: 5999,
+    description:
+      "Minimalist table lamp with a solid white marble base and a tapered silk shade.",
+    images: [
+      u("1540932295468-0a8b44b2b6b7"),
+    ],
+  },
+
+  {
+    id: 33,
+    title: "Pendant Light Cluster",
+    price: 11999,
+    description:
+      "Cluster of three smoked glass pendant lights with adjustable gold suspension cables.",
+    images: [
+      u("1600585154340-be6161a56a0c"),
     ],
   },
 
@@ -347,12 +379,12 @@ export const cabinets = [
    SECTIONS LIST — controls the order shown on the Collection page.
    =========================================================================== */
 export const sections = [
-  { name: "Sofas & Seating",         items: sofas    },
-  { name: "Beds & Bedroom",          items: beds     },
-  { name: "Dining",                  items: dining   },
-  { name: "Chairs & Accent Seating", items: chairs   },
-  { name: "Tables & Surfaces",       items: tables   },
-  { name: "Cabinets & Storage",      items: cabinets },
+  { name: "Sofas",              items: sofas              },
+  { name: "Tables",             items: tables             },
+  { name: "Chairs",             items: chairs             },
+  { name: "Mats",               items: mats               },
+  { name: "Kitchen Accessories", items: kitchenAccessories },
+  { name: "Lamps & Light Fixtures", items: lamps          },
 ];
 
 
