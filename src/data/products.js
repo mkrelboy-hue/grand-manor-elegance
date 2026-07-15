@@ -2,53 +2,39 @@
    GRAND MANOR FURNITURE — PRODUCT CATALOG
    ============================================================================
 
-   HOW TO EDIT THIS FILE (read this first!)
-   ----------------------------------------
-   The catalog is split into SECTIONS (Sofas, Beds, Dining, etc).
-   Each section is an array of products. To make changes, just edit the
-   section you want — nothing else will be affected.
+   HOW TO EDIT THIS FILE
+   ---------------------
+   Each product has ONE image by default — the same piece shown on its own.
+   To show extra ANGLES of the SAME product, add more photos of that exact
+   piece to the `images: [ ... ]` list. Do NOT paste photos of other products
+   here — the gallery will show every image in the list as if it were the
+   same product.
 
-   1. CHANGE A PRICE
-        Find the product, change the `price` number. It's in Rands (ZAR).
-        Example:   price: 24999,   →   price: 19999,
-
-   2. CHANGE A TITLE OR DESCRIPTION
-        Edit the text between the quotes.
-
-   3. ADD A NEW IMAGE TO A PRODUCT
-        Add another URL (in quotes) to the `images: [ ... ]` list.
-        Separate each URL with a comma.
-
-   4. REMOVE AN IMAGE
-        Delete the line for that image (and its trailing comma).
-
-   5. ADD AN IMAGE FROM YOUR LAPTOP
-        a) Drop the photo into the folder:   src/assets/local/
-           (create the folder if it doesn't exist)
-        b) At the very top of THIS file, add a line like:
-              import mySofa from "../assets/local/my-sofa.jpg";
-        c) Then use `mySofa` (no quotes) inside the `images: [ ... ]` list:
-              images: [ mySofa, "https://...", ... ]
-
-   6. ADD A WHOLE NEW PRODUCT
-        Copy one of the existing product blocks, paste it into the right
-        section, and change the `id` to a number that isn't used yet.
-
-   7. ADD A WHOLE NEW SECTION
-        Copy a section block (the `export const ... = [ ... ];` group),
-        rename it, then add it to the `sections` list at the bottom.
+   1. CHANGE A PRICE            edit the `price` number (Rands, no commas)
+   2. CHANGE TITLE / TEXT       edit the text between the quotes
+   3. ADD ANOTHER ANGLE         add a new URL (or local import) to `images: [ ]`
+   4. REMOVE AN ANGLE           delete that line inside `images: [ ]`
+   5. USE A PHOTO FROM LAPTOP
+        a) drop it into  src/assets/local/   (create folder if needed)
+        b) at the top of this file add:
+              import sofaAngle1 from "../assets/local/royal-sofa-1.jpg";
+              import sofaAngle2 from "../assets/local/royal-sofa-2.jpg";
+        c) use them (no quotes) inside images:
+              images: [ sofaAngle1, sofaAngle2 ]
+   6. ADD A NEW PRODUCT         copy a product block, change the `id`
+   7. HIDE A SECTION            comment out its line in `sections` at the bottom
 
    ========================================================================= */
 
 
 // ---- LOCAL IMAGE IMPORTS (add yours here) ---------------------------------
 // Example:
-//   import livingRoom1 from "../assets/local/living-room-1.jpg";
-//   import diningHero  from "../assets/local/dining-hero.jpg";
+//   import royalSofaFront from "../assets/local/royal-sofa-front.jpg";
+//   import royalSofaSide  from "../assets/local/royal-sofa-side.jpg";
 // ---------------------------------------------------------------------------
 
 
-// Small helper so we can write short Unsplash photo IDs instead of full URLs.
+// Helper — short Unsplash IDs instead of full URLs.
 const u = (id) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=1200&q=80`;
 
 
@@ -65,12 +51,9 @@ export const sofas = [
     price: 24999,
     description:
       "Hand-tufted leather chesterfield with solid mahogany legs. A statement piece for grand living rooms.",
+    // Add more angle shots of THIS sofa below.
     images: [
       u("1555041469-a586c61ea9bc"),
-      u("1493663284031-b7e3aefcae8e"),
-      u("1567538096630-e0c55bd6374c"),
-      u("1540574163026-643ea20ade25"),
-      u("1586023492125-27b2c045efd7"),
     ],
   },
 
@@ -81,9 +64,7 @@ export const sofas = [
     description:
       "Modular sectional in champagne velvet, seating up to seven in absolute comfort.",
     images: [
-      u("1555041469-a586c61ea9bc"),
       u("1493663284031-b7e3aefcae8e"),
-      u("1567538096630-e0c55bd6374c"),
     ],
   },
 
@@ -95,8 +76,6 @@ export const sofas = [
       "Compact two-seater in slate linen with cushion-soft duck down fill.",
     images: [
       u("1540574163026-643ea20ade25"),
-      u("1586023492125-27b2c045efd7"),
-      u("1555041469-a586c61ea9bc"),
     ],
   },
 
@@ -118,9 +97,6 @@ export const beds = [
       "Velvet-upholstered king bed with hand-stitched headboard and brushed brass detailing.",
     images: [
       u("1505693416388-ac5ce068fe85"),
-      u("1522771739844-6a9f6d5f14af"),
-      u("1540518614846-7eded433c457"),
-      u("1505693314120-0d443867891c"),
     ],
   },
 
@@ -132,8 +108,6 @@ export const beds = [
       "Four-poster canopy bed in solid oak, finished in espresso with hand-carved detailing.",
     images: [
       u("1522771739844-6a9f6d5f14af"),
-      u("1505693416388-ac5ce068fe85"),
-      u("1540518614846-7eded433c457"),
     ],
   },
 
@@ -145,8 +119,6 @@ export const beds = [
       "Three-fold mirrored vanity in cream lacquer with matching upholstered stool.",
     images: [
       u("1551298370-9d3d53740c72"),
-      u("1581539250439-c96689b516dd"),
-      u("1595428774223-ef52624120d2"),
     ],
   },
 
@@ -168,9 +140,6 @@ export const dining = [
       "Eight-seater walnut dining ensemble with marble inlay and signature gilded edges.",
     images: [
       u("1617806118233-18e1de247200"),
-      u("1615874959474-d609969a20ed"),
-      u("1554995207-c18c203602cb"),
-      u("1583845112203-29329902332e"),
     ],
   },
 
@@ -182,8 +151,6 @@ export const dining = [
       "Twelve-seater banquet table in reclaimed teak with forged iron understructure.",
     images: [
       u("1617104678098-de229db51175"),
-      u("1617806118233-18e1de247200"),
-      u("1615874959474-d609969a20ed"),
     ],
   },
 
@@ -195,8 +162,6 @@ export const dining = [
       "Set of four upholstered dining chairs in saddle leather with tapered ash legs.",
     images: [
       u("1554995207-c18c203602cb"),
-      u("1583845112203-29329902332e"),
-      u("1617806118233-18e1de247200"),
     ],
   },
 
@@ -218,8 +183,6 @@ export const chairs = [
       "Italian leather lounge chair with sculpted oak frame and ergonomic curvature.",
     images: [
       u("1567538096630-e0c55bd6374c"),
-      u("1506439773649-6e0eb8cfb237"),
-      u("1519947486511-46149fa0a254"),
     ],
   },
 
@@ -231,8 +194,6 @@ export const chairs = [
       "Deep-buttoned wingback in handwoven jacquard with stained beechwood legs.",
     images: [
       u("1561701984-26ace0ec5e94"),
-      u("1580229080435-1c7e2c5be0e3"),
-      u("1506439773649-6e0eb8cfb237"),
     ],
   },
 
@@ -244,8 +205,6 @@ export const chairs = [
       "Sculptural accent chair upholstered in mohair velvet with brass-tipped legs.",
     images: [
       u("1519947486511-46149fa0a254"),
-      u("1567538096630-e0c55bd6374c"),
-      u("1561701984-26ace0ec5e94"),
     ],
   },
 
@@ -257,8 +216,6 @@ export const chairs = [
       "Round tufted ottoman in ivory boucle with hand-finished walnut base.",
     images: [
       u("1580229080435-1c7e2c5be0e3"),
-      u("1506439773649-6e0eb8cfb237"),
-      u("1519947486511-46149fa0a254"),
     ],
   },
 
@@ -269,9 +226,7 @@ export const chairs = [
     description:
       "Curved reading chair with integrated side shelf in cognac leather.",
     images: [
-      u("1561701984-26ace0ec5e94"),
-      u("1519947486511-46149fa0a254"),
-      u("1567538096630-e0c55bd6374c"),
+      u("1506439773649-6e0eb8cfb237"),
     ],
   },
 
@@ -293,8 +248,6 @@ export const tables = [
       "Carrara marble top resting on a hand-cast bronze base inspired by classical French design.",
     images: [
       u("1554295405-abb8fd54f153"),
-      u("1532372576444-dda954194ad0"),
-      u("1533090481720-856c6e3c1fdc"),
     ],
   },
 
@@ -306,8 +259,6 @@ export const tables = [
       "Polished onyx console with mirrored backing and slender geometric base.",
     images: [
       u("1567016432779-094069958ea5"),
-      u("1531973486364-5fa64260d75b"),
-      u("1554295405-abb8fd54f153"),
     ],
   },
 
@@ -319,8 +270,6 @@ export const tables = [
       "Trio of nesting tables in smoked glass and antiqued gold metal frames.",
     images: [
       u("1532372576444-dda954194ad0"),
-      u("1533090481720-856c6e3c1fdc"),
-      u("1567016432779-094069958ea5"),
     ],
   },
 
@@ -342,8 +291,6 @@ export const cabinets = [
       "Glass-fronted display cabinet in burled walnut with internal soft-glow lighting.",
     images: [
       u("1551298370-9d3d53740c72"),
-      u("1581539250439-c96689b516dd"),
-      u("1595428774223-ef52624120d2"),
     ],
   },
 
@@ -355,8 +302,6 @@ export const cabinets = [
       "Eight-door wardrobe in matte ebony with smoked glass inserts and integrated lighting.",
     images: [
       u("1581539250439-c96689b516dd"),
-      u("1595428774223-ef52624120d2"),
-      u("1551298370-9d3d53740c72"),
     ],
   },
 
@@ -368,8 +313,6 @@ export const cabinets = [
       "Floor-to-ceiling open bookcase in blackened steel and smoked walnut shelves.",
     images: [
       u("1595428774223-ef52624120d2"),
-      u("1551298370-9d3d53740c72"),
-      u("1581539250439-c96689b516dd"),
     ],
   },
 
@@ -380,9 +323,7 @@ export const cabinets = [
     description:
       "Mid-century inspired sideboard in rosewood with brushed brass hardware.",
     images: [
-      u("1567016432779-094069958ea5"),
-      u("1551298370-9d3d53740c72"),
-      u("1581539250439-c96689b516dd"),
+      u("1531973486364-5fa64260d75b"),
     ],
   },
 
@@ -393,9 +334,7 @@ export const cabinets = [
     description:
       "Lacquered bar cabinet with mirrored interior, glass shelves, and brass fittings.",
     images: [
-      u("1595428774223-ef52624120d2"),
-      u("1567016432779-094069958ea5"),
-      u("1551298370-9d3d53740c72"),
+      u("1533090481720-856c6e3c1fdc"),
     ],
   },
 
@@ -406,16 +345,14 @@ export const cabinets = [
 
 /* ===========================================================================
    SECTIONS LIST — controls the order shown on the Collection page.
-   To hide a section, comment its line out with //.
-   To reorder, drag the lines around.
    =========================================================================== */
 export const sections = [
-  { name: "Sofas & Seating",        items: sofas    },
-  { name: "Beds & Bedroom",         items: beds     },
-  { name: "Dining",                 items: dining   },
-  { name: "Chairs & Accent Seating", items: chairs  },
-  { name: "Tables & Surfaces",      items: tables   },
-  { name: "Cabinets & Storage",     items: cabinets },
+  { name: "Sofas & Seating",         items: sofas    },
+  { name: "Beds & Bedroom",          items: beds     },
+  { name: "Dining",                  items: dining   },
+  { name: "Chairs & Accent Seating", items: chairs   },
+  { name: "Tables & Surfaces",       items: tables   },
+  { name: "Cabinets & Storage",      items: cabinets },
 ];
 
 
@@ -426,8 +363,7 @@ export const products = sections.flatMap((s) => s.items);
 
 
 /* ===========================================================================
-   CONTACT LINKS & HELPERS — edit the phone number here once and it
-   updates everywhere on the site.
+   CONTACT LINKS & HELPERS
    =========================================================================== */
 export const PHONE_NUMBER = "+27123456789";
 
